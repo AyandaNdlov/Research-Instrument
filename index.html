@@ -51,7 +51,6 @@
             text-transform: uppercase;
         }
 
-        /* PROGRESS BAR */
         .progress-bar-container {
             background: rgba(30, 64, 175, 0.15);
             height: 6px;
@@ -79,14 +78,12 @@
             letter-spacing: 0.3px;
         }
 
-        /* MAIN APP */
         #app {
             max-width: 720px;
             margin: 0 auto;
             padding: 4px 24px 60px;
         }
 
-        /* CARD */
         .card {
             background: rgba(255, 255, 255, 0.92);
             border: 1px solid #bfdbfe;
@@ -131,11 +128,39 @@
             margin: 8px 0 0 18px;
             list-style: disc;
         }
-        .question-sub li {
-            margin-bottom: 4px;
+        .question-sub li { margin-bottom: 4px; }
+
+        /* CONSENT SPECIFIC */
+        .consent-body {
+            font-size: 14px;
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 28px;
+        }
+        .consent-body h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #0a2a5e;
+            margin: 20px 0 8px;
+        }
+        .consent-body p { margin-bottom: 10px; }
+        .consent-body ul {
+            margin: 6px 0 10px 20px;
+            list-style: disc;
+        }
+        .consent-body li { margin-bottom: 4px; }
+        .consent-statement {
+            background: #eff6ff;
+            border: 1.5px solid #93c5fd;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            font-size: 14px;
+            color: #0a2a5e;
+            font-weight: 600;
+            line-height: 1.7;
         }
 
-        /* OPTIONS */
         .options-list { margin-bottom: 28px; }
 
         .option-row {
@@ -185,10 +210,8 @@
             display: none;
         }
         .option-row.selected .option-radio-inner { display: block; }
-
         .option-text { font-size: 15px; color: #1e3a5f; flex: 1; font-weight: 600; }
 
-        /* ANSWER DISPLAY BOX */
         .answer-display {
             background: linear-gradient(90deg, #eff6ff, #dbeafe);
             border: 1.5px solid #93c5fd;
@@ -213,7 +236,6 @@
             white-space: pre-wrap;
         }
 
-        /* CONFIDENCE SLIDER */
         .slider-section { margin-bottom: 32px; }
         .slider-label {
             font-size: 15px;
@@ -261,7 +283,6 @@
         .slider-hints { display: flex; justify-content: space-between; margin-top: 10px; }
         .slider-hint { font-size: 12px; color: #6b7280; font-weight: 600; }
 
-        /* BUTTONS */
         .btn {
             display: inline-block;
             padding: 12px 28px;
@@ -305,7 +326,6 @@
         }
         .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
 
-        /* AI FEEDBACK BOX */
         .ai-feedback-box {
             background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
             border-left: 5px solid #1a56db;
@@ -335,7 +355,6 @@
         }
         .ai-feedback-text { font-size: 14px; color: #1e3a5f; line-height: 1.8; }
 
-        /* SPINNER */
         .spinner-section { text-align: center; padding: 48px 0; }
         .spinner {
             width: 42px; height: 42px;
@@ -349,7 +368,6 @@
         @keyframes spin { 100% { transform: rotate(360deg); } }
         .spinner-text { font-size: 14px; color: #3b5bdb; line-height: 1.5; font-weight: 600; }
 
-        /* TEXTAREA */
         .textarea-label {
             font-size: 15px;
             font-weight: 600;
@@ -391,7 +409,6 @@
         .word-count.over { color: #ef4444; }
         .word-count.good { color: #10b981; }
 
-        /* SELECT / DROPDOWN */
         .form-group { margin-bottom: 24px; }
         .form-label {
             font-size: 15px;
@@ -425,7 +442,6 @@
         }
         select.error { border-color: #ef4444; }
 
-        /* LIKERT TABLE */
         .likert-table {
             width: 100%;
             border-collapse: separate;
@@ -466,19 +482,14 @@
             line-height: 1.5;
             max-width: 320px;
         }
-        .likert-table tbody tr:hover {
-            background: #f8fbff;
-        }
-        .likert-table tbody tr.error-row td:first-child {
-            color: #ef4444;
-        }
+        .likert-table tbody tr:hover { background: #f8fbff; }
+        .likert-table tbody tr.error-row td:first-child { color: #ef4444; }
         .likert-radio {
             width: 20px; height: 20px;
             cursor: pointer;
             accent-color: #1a56db;
         }
 
-        /* THANK YOU */
         .thankyou-content { text-align: center; padding: 24px 0; }
         .thankyou-content h2 { font-size: 24px; font-weight: 700; color: #0a2a5e; margin-bottom: 16px; }
         .thankyou-content p { font-size: 15px; color: #374151; line-height: 1.7; max-width: 560px; margin: 0 auto 16px; }
@@ -494,7 +505,6 @@
         }
         .check-circle svg { width: 28px; height: 28px; }
 
-        /* FIELD ERROR */
         .field-error {
             font-size: 13px;
             color: #ef4444;
@@ -505,24 +515,40 @@
         }
         .field-error.visible { display: block; }
 
-        .revise-prompt {
-            font-size: 15px;
-            font-weight: 700;
-            color: #0a2a5e;
-            margin-bottom: 18px;
-        }
-
-        /* OTHER TEXTAREA (small) */
-        .other-textarea {
-            min-height: 80px;
-            margin-top: 12px;
-        }
-
         .divider {
             border: none;
             border-top: 2px solid #dbeafe;
             margin: 24px 0;
         }
+
+        .debrief-body {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 14px;
+            color: #374151;
+            line-height: 1.7;
+        }
+        .debrief-body h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #0a2a5e;
+            margin: 20px 0 8px;
+        }
+        .debrief-body p { margin-bottom: 12px; }
+        .debrief-body .contact-block {
+            background: #eff6ff;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border: 1px solid #dbeafe;
+        }
+        .debrief-body .contact-block p { margin-bottom: 4px; }
+
+        /* Decline screen */
+        .decline-content { text-align: center; padding: 40px 0; }
+        .decline-content h2 { font-size: 22px; font-weight: 700; color: #0a2a5e; margin-bottom: 12px; }
+        .decline-content p { font-size: 15px; color: #374151; line-height: 1.7; }
     </style>
 </head>
 <body>
@@ -539,7 +565,7 @@
     <div class="progress-bar-fill" id="progressBar"></div>
 </div>
 <div class="progress-label-row">
-    <span class="progress-label" id="progressLabel">Demographics</span>
+    <span class="progress-label" id="progressLabel">Consent</span>
     <span class="progress-label" id="progressPct">0%</span>
 </div>
 
@@ -548,71 +574,18 @@
 <!-- BINARY RAIN -->
 <script>
 (function () {
-    var canvas = document.getElementById('binary-canvas');
-    var ctx = canvas.getContext('2d');
-    var cols, drops;
-    var FONT_SIZE = 14;
-    var CHARS = '01';
-
-    function resize() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        cols = Math.floor(canvas.width / FONT_SIZE);
-        drops = [];
-        for (var i = 0; i < cols; i++) {
-            drops[i] = Math.random() * -canvas.height / FONT_SIZE;
-        }
-    }
-
-    function draw() {
-        ctx.fillStyle = 'rgba(10, 22, 40, 0.05)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.font = FONT_SIZE + 'px monospace';
-        for (var i = 0; i < drops.length; i++) {
-            var char = CHARS[Math.floor(Math.random() * CHARS.length)];
-            var y = drops[i] * FONT_SIZE;
-            if (drops[i] > 0) {
-                ctx.fillStyle = '#93c5fd';
-                ctx.fillText(char, i * FONT_SIZE, y);
-            }
-            if (drops[i] > 2) {
-                ctx.fillStyle = 'rgba(26, 86, 219, 0.7)';
-                ctx.fillText(CHARS[Math.floor(Math.random() * CHARS.length)], i * FONT_SIZE, y - FONT_SIZE);
-            }
-            if (y > canvas.height && Math.random() > 0.975) drops[i] = 0;
-            drops[i] += 0.5;
-        }
-    }
-
-    resize();
-    window.addEventListener('resize', resize);
-    setInterval(draw, 40);
+    var c = document.getElementById('binary-canvas'), ctx = c.getContext('2d'), cols, drops, FS = 14, CH = '01';
+    function resize() { c.width = innerWidth; c.height = innerHeight; cols = Math.floor(c.width / FS); drops = []; for (var i = 0; i < cols; i++) drops[i] = Math.random() * -c.height / FS; }
+    function draw() { ctx.fillStyle = 'rgba(10,22,40,0.05)'; ctx.fillRect(0, 0, c.width, c.height); ctx.font = FS + 'px monospace'; for (var i = 0; i < drops.length; i++) { var ch = CH[Math.floor(Math.random() * CH.length)], y = drops[i] * FS; if (drops[i] > 0) { ctx.fillStyle = '#93c5fd'; ctx.fillText(ch, i * FS, y); } if (drops[i] > 2) { ctx.fillStyle = 'rgba(26,86,219,0.7)'; ctx.fillText(CH[Math.floor(Math.random() * CH.length)], i * FS, y - FS); } if (y > c.height && Math.random() > 0.975) drops[i] = 0; drops[i] += 0.5; } }
+    resize(); addEventListener('resize', resize); setInterval(draw, 40);
 })();
 </script>
 
 <script>
-/* =========================================================================
-   CONFIGURATION
-========================================================================= */
+
 const SHEETS_URL = 'https://script.google.com/macros/s/AKfycby7C1M4WE1JqAJOlQwArq_dm8DS-KahosVu8MPfqjy5aMWI8nGNs0qRve84sAw-5PzY/exec';
 
-/* =========================================================================
-   RESEARCH ETHICS REMINDER
-   =========================================================================
-   This instrument uses AI feedback of varying valence (positive vs negative)
-   to test response-revision behaviour. Before deploying:
-     1. Obtain IRB / ethics board approval.
-     2. Obtain informed consent from participants.
-     3. Conduct a full debriefing after each session explaining that the AI
-        feedback was pre-scripted and NOT based on actual analysis of their
-        response.
-========================================================================= */
 
-
-/* =========================================================================
-   FEEDBACK CONDITIONS
-   Randomly assigned per participant at initialisation.
-========================================================================= */
 const FEEDBACK_NEGATIVE =
     'Your response is not yet fully developed. While a position is stated, the reasoning could be ' +
     'clearer, and the limitation is not sufficiently explained. The answer would be stronger with ' +
@@ -622,14 +595,10 @@ const FEEDBACK_POSITIVE =
     'Your response is well reasoned. Your position is clear, your arguments are relevant, and you ' +
     'have considered a valid limitation. The answer demonstrates good critical thinking.';
 
-/* Randomly assign condition: 'positive' or 'negative' */
 const FEEDBACK_CONDITION = Math.random() < 0.5 ? 'positive' : 'negative';
 const FEEDBACK_TEXT = FEEDBACK_CONDITION === 'positive' ? FEEDBACK_POSITIVE : FEEDBACK_NEGATIVE;
 
 
-/* =========================================================================
-   FACULTIES
-========================================================================= */
 const FACULTIES = [
     'Commerce',
     'Engineering & the Built Environment',
@@ -642,94 +611,63 @@ const FACULTIES = [
 ];
 
 
-/* =========================================================================
-   AI FAMILIARITY STATEMENTS
-========================================================================= */
 const AI_STATEMENTS = [
     'I consider AI-generated feedback to be a credible source of academic guidance.',
-    'AI-generated feedback is often accurate enough to inform my academic decisions.',
-    'I view AI-generated feedback as a legitimate source of evaluation for academic work.',
-    'When AI provides feedback on academic responses, I tend to take it seriously.',
-    'AI-generated feedback can identify weaknesses in academic work effectively.',
-    'I am likely to trust AI feedback when it evaluates the quality of my academic response.'
+    'AI-generated feedback is reliable when evaluating academic responses.',
+    'I trust AI-generated feedback when it comments on the quality of my academic work.',
+    'AI-generated feedback can provide accurate judgements about student responses.',
+    'I view AI-generated feedback as a legitimate source of evaluation in academic tasks.',
+    'When AI provides feedback on my work, I take its judgement seriously.'
+];
+
+
+const ASE_STATEMENTS = [
+    'I am confident in my ability to perform well in my university coursework.',
+    'I can understand difficult academic material when I apply effort.',
+    'I am able to complete challenging academic tasks successfully.',
+    'I trust my judgement when answering academic questions.',
+    'I can remain effective even when coursework is demanding.',
+    'I am confident that I can solve unfamiliar academic problems.',
+    'When I face difficult academic tasks, I know I can manage them.',
+    'I believe I can achieve the academic standards expected of me.'
 ];
 
 const LIKERT_OPTIONS = ['Strongly Disagree', 'Disagree', 'Neutral', 'Agree', 'Strongly Agree'];
 
 
-/* =========================================================================
-   REASON OPTIONS
-========================================================================= */
-const REASON_OPTIONS = [
-    'I agreed with the AI feedback',
-    'The feedback made me reconsider my answer',
-    'I was unsure about my original answer',
-    'I believed my original answer was already strong',
-    'Other'
-];
-
-
-/* =========================================================================
-   APPLICATION STATE
-========================================================================= */
-/*
-   Phases:
-     DEMO         → Demographics (faculty, year)
-     WRITE        → Main writing question
-     CONF_PRE     → Pre-feedback confidence (1–7)
-     FEEDBACK     → AI feedback (loading → display)
-     CONF_POST    → Post-feedback confidence (1–7)
-     REVISE_ASK   → Would you like to revise?
-     REVISE_EDIT  → Revision textarea (only if yes)
-     REASON       → Why did you keep/revise?
-     AI_FAM       → AI familiarity Likert
-     DONE         → Debrief / thank-you
-*/
-
 const state = {
-    phase: 'DEMO',
+    phase: 'CONSENT',
     feedbackShown: false,
-
-    demo: {
-        faculty: null,
-        yearOfStudy: null
-    },
-
+    demo: { faculty: null, yearOfStudy: null },
     response: {
-        initialText:       '',
-        preConfidence:     4,
-        aiFeedback:        null,
-        postConfidence:    4,
-        revisedChoice:     null,   // 'yes' or 'no'
-        revisedText:       '',
-        reason:            null,
-        reasonOtherText:   ''
+        initialText: '',
+        preConfidence: 4,
+        aiFeedback: null,
+        changeDecision: null,
+        postConfidence: 4,
+        revisionExtent: 1
     },
-
-    aiFamiliarity: {}  // keyed by statement index: 0–5 → likert value
+    aiFamiliarity: {},
+    selfEfficacy: {}
 };
 
 
-/* =========================================================================
-   PROGRESS
-========================================================================= */
 const PHASES_ORDER = [
-    'DEMO', 'WRITE', 'CONF_PRE', 'FEEDBACK',
-    'CONF_POST', 'REVISE_ASK', 'REVISE_EDIT', 'REASON',
-    'AI_FAM', 'DONE'
+    'CONSENT', 'DEMO', 'WRITE', 'CONF_PRE', 'FEEDBACK', 'CHANGE_DECISION',
+    'CONF_POST', 'REVISION_EXTENT', 'AI_FAM', 'SELF_EFFICACY', 'DONE'
 ];
-
 const PHASE_LABELS = {
-    'DEMO':        'Demographics',
-    'WRITE':       'Section 1 — Written Response',
-    'CONF_PRE':    'Section 1 — Pre-Feedback Confidence',
-    'FEEDBACK':    'Section 2 — AI Feedback',
-    'CONF_POST':   'Section 2 — Post-Feedback Confidence',
-    'REVISE_ASK':  'Section 3 — Revision Decision',
-    'REVISE_EDIT': 'Section 3 — Revise Your Response',
-    'REASON':      'Section 3 — Explanation',
-    'AI_FAM':      'Section 4 — AI Familiarity',
-    'DONE':        'Study Complete'
+    'CONSENT':          'Informed Consent',
+    'DEMO':             'Demographics',
+    'WRITE':            'Section 1 \u2014 Written Response',
+    'CONF_PRE':         'Section 1 \u2014 Pre-Feedback Confidence',
+    'FEEDBACK':         'Section 2 \u2014 AI Feedback',
+    'CHANGE_DECISION':  'Section 2 \u2014 Change Decision',
+    'CONF_POST':        'Section 2 \u2014 Post-Feedback Confidence',
+    'REVISION_EXTENT':  'Section 2 \u2014 Revision Extent',
+    'AI_FAM':           'Section 3 \u2014 AI Familiarity',
+    'SELF_EFFICACY':    'Section 4 \u2014 Academic Self-Efficacy',
+    'DONE':             'Study Complete'
 };
 
 function updateProgress() {
@@ -742,438 +680,155 @@ function updateProgress() {
 }
 
 
-/* =========================================================================
-   SHARED UI BUILDERS
-========================================================================= */
-function createCard(stepLabel) {
-    var card = document.createElement('div');
-    card.className = 'card';
-    if (stepLabel) {
-        var ind = document.createElement('div');
-        ind.className = 'step-indicator';
-        ind.textContent = stepLabel;
-        card.appendChild(ind);
-    }
-    return card;
+function createCard(label) {
+    var c = document.createElement('div'); c.className = 'card';
+    if (label) { var s = document.createElement('div'); s.className = 'step-indicator'; s.textContent = label; c.appendChild(s); }
+    return c;
+}
+function mount(c) { document.getElementById('app').appendChild(c); }
+
+function buildAnswerBox(label, value) {
+    var b = document.createElement('div'); b.className = 'answer-display';
+    var l = document.createElement('span'); l.className = 'disp-label'; l.textContent = label;
+    var v = document.createElement('span'); v.className = 'disp-value'; v.textContent = value;
+    b.appendChild(l); b.appendChild(v); return b;
 }
 
-function mount(card) {
-    document.getElementById('app').appendChild(card);
-}
-
-function buildAnswerBox(labelText, value) {
-    var box = document.createElement('div');
-    box.className = 'answer-display';
-    var lbl = document.createElement('span');
-    lbl.className = 'disp-label';
-    lbl.textContent = labelText;
-    var val = document.createElement('span');
-    val.className = 'disp-value';
-    val.textContent = value;
-    box.appendChild(lbl);
-    box.appendChild(val);
-    return box;
-}
-
-function buildSlider(labelText, initial, min, max, lowLabel, highLabel) {
-    var section = document.createElement('div');
-    section.className = 'slider-section';
-
-    var lbl = document.createElement('span');
-    lbl.className = 'slider-label';
-    lbl.textContent = labelText;
-    section.appendChild(lbl);
-
-    var valDisplay = document.createElement('div');
-    valDisplay.className = 'slider-value-display';
-    valDisplay.textContent = initial;
-    section.appendChild(valDisplay);
-
-    var input = document.createElement('input');
-    input.type = 'range';
-    input.min = '' + min;
-    input.max = '' + max;
-    input.value = '' + initial;
-    input.addEventListener('input', function () { valDisplay.textContent = this.value; });
-    section.appendChild(input);
-
-    var hints = document.createElement('div');
-    hints.className = 'slider-hints';
-    hints.innerHTML =
-        '<span class="slider-hint">' + (lowLabel || '1 = Not at all confident') + '</span>' +
-        '<span class="slider-hint">' + (highLabel || max + ' = Extremely confident') + '</span>';
-    section.appendChild(hints);
-
-    return { el: section, getValue: function () { return parseInt(input.value, 10); } };
+function buildSlider(label, initial, min, max, lowLbl, highLbl) {
+    var s = document.createElement('div'); s.className = 'slider-section';
+    var l = document.createElement('span'); l.className = 'slider-label'; l.textContent = label; s.appendChild(l);
+    var d = document.createElement('div'); d.className = 'slider-value-display'; d.textContent = initial; s.appendChild(d);
+    var inp = document.createElement('input'); inp.type = 'range'; inp.min = '' + min; inp.max = '' + max; inp.value = '' + initial;
+    inp.addEventListener('input', function () { d.textContent = this.value; }); s.appendChild(inp);
+    var h = document.createElement('div'); h.className = 'slider-hints';
+    h.innerHTML = '<span class="slider-hint">' + lowLbl + '</span><span class="slider-hint">' + highLbl + '</span>';
+    s.appendChild(h);
+    return { el: s, getValue: function () { return parseInt(inp.value, 10); } };
 }
 
 function buildOptionRow(text, selected, onClick) {
-    var row = document.createElement('div');
-    row.className = 'option-row' + (selected ? ' selected' : '');
-
-    var radio = document.createElement('div');
-    radio.className = 'option-radio';
-    var dot = document.createElement('div');
-    dot.className = 'option-radio-inner';
-    dot.style.display = selected ? 'block' : 'none';
-    radio.appendChild(dot);
-
-    var label = document.createElement('span');
-    label.className = 'option-text';
-    label.textContent = text;
-
-    row.appendChild(radio);
-    row.appendChild(label);
-
-    if (onClick) row.addEventListener('click', onClick);
-    return row;
+    var r = document.createElement('div'); r.className = 'option-row' + (selected ? ' selected' : '');
+    var rd = document.createElement('div'); rd.className = 'option-radio';
+    var dot = document.createElement('div'); dot.className = 'option-radio-inner'; dot.style.display = selected ? 'block' : 'none';
+    rd.appendChild(dot);
+    var lb = document.createElement('span'); lb.className = 'option-text'; lb.textContent = text;
+    r.appendChild(rd); r.appendChild(lb);
+    if (onClick) r.addEventListener('click', onClick);
+    return r;
 }
 
-function countWords(text) {
-    var trimmed = text.trim();
-    if (!trimmed) return 0;
-    return trimmed.split(/\s+/).length;
-}
+function countWords(t) { var s = t.trim(); return s ? s.split(/\s+/).length : 0; }
 
-
-/* =========================================================================
-   RENDER DISPATCHER
-========================================================================= */
-function render() {
-    window.scrollTo(0, 0);
-    updateProgress();
-    document.getElementById('app').innerHTML = '';
-
-    switch (state.phase) {
-        case 'DEMO':        renderDemo();       break;
-        case 'WRITE':       renderWrite();      break;
-        case 'CONF_PRE':    renderConfPre();    break;
-        case 'FEEDBACK':    renderFeedback();   break;
-        case 'CONF_POST':   renderConfPost();   break;
-        case 'REVISE_ASK':  renderReviseAsk();  break;
-        case 'REVISE_EDIT': renderReviseEdit(); break;
-        case 'REASON':      renderReason();     break;
-        case 'AI_FAM':      renderAiFam();      break;
-        case 'DONE':        renderDone();       break;
-    }
-}
-
-
-/* =========================================================================
-   DEMOGRAPHICS
-========================================================================= */
-function renderDemo() {
-    var card = createCard('Demographics');
-
-    var qText = document.createElement('p');
-    qText.className = 'question-text';
-    qText.textContent = 'Please provide the following information before we begin.';
-    card.appendChild(qText);
-
-    // Faculty
-    var fg1 = document.createElement('div');
-    fg1.className = 'form-group';
-    var lbl1 = document.createElement('label');
-    lbl1.className = 'form-label';
-    lbl1.textContent = 'Faculty';
-    fg1.appendChild(lbl1);
-
-    var sel1 = document.createElement('select');
-    sel1.id = 'demo-faculty';
-    var opt0 = document.createElement('option');
-    opt0.value = '';
-    opt0.textContent = '— Select your faculty —';
-    opt0.disabled = true;
-    opt0.selected = true;
-    sel1.appendChild(opt0);
-    FACULTIES.forEach(function (f) {
-        var o = document.createElement('option');
-        o.value = f;
-        o.textContent = f;
-        sel1.appendChild(o);
-    });
-    fg1.appendChild(sel1);
-    var err1 = document.createElement('p');
-    err1.className = 'field-error';
-    err1.id = 'err-faculty';
-    err1.textContent = 'Please select your faculty.';
-    fg1.appendChild(err1);
-    card.appendChild(fg1);
-
-    // Year of study
-    var fg2 = document.createElement('div');
-    fg2.className = 'form-group';
-    var lbl2 = document.createElement('label');
-    lbl2.className = 'form-label';
-    lbl2.textContent = 'Year of Study';
-    fg2.appendChild(lbl2);
-
-    var sel2 = document.createElement('select');
-    sel2.id = 'demo-year';
-    var optY0 = document.createElement('option');
-    optY0.value = '';
-    optY0.textContent = '— Select your year of study —';
-    optY0.disabled = true;
-    optY0.selected = true;
-    sel2.appendChild(optY0);
-    ['1st Year', '2nd Year', '3rd Year', '4th Year', '5th Year'].forEach(function (y) {
-        var o = document.createElement('option');
-        o.value = y;
-        o.textContent = y;
-        sel2.appendChild(o);
-    });
-    fg2.appendChild(sel2);
-    var err2 = document.createElement('p');
-    err2.className = 'field-error';
-    err2.id = 'err-year';
-    err2.textContent = 'Please select your year of study.';
-    fg2.appendChild(err2);
-    card.appendChild(fg2);
-
-    // Next button
-    var btn = document.createElement('button');
-    btn.className = 'btn btn-primary';
-    btn.textContent = 'Continue';
-    btn.addEventListener('click', function () {
-        var fac = sel1.value;
-        var yr = sel2.value;
-        var valid = true;
-
-        if (!fac) {
-            sel1.classList.add('error');
-            err1.classList.add('visible');
-            valid = false;
-        } else {
-            sel1.classList.remove('error');
-            err1.classList.remove('visible');
-        }
-
-        if (!yr) {
-            sel2.classList.add('error');
-            err2.classList.add('visible');
-            valid = false;
-        } else {
-            sel2.classList.remove('error');
-            err2.classList.remove('visible');
-        }
-
-        if (!valid) return;
-
-        state.demo.faculty = fac;
-        state.demo.yearOfStudy = yr;
-        state.phase = 'WRITE';
-        render();
-    });
-    card.appendChild(btn);
-    mount(card);
-}
-
-
-/* =========================================================================
-   MAIN WRITING QUESTION
-========================================================================= */
-function renderWrite() {
-    var card = createCard(PHASE_LABELS['WRITE']);
-
-    var qText = document.createElement('p');
-    qText.className = 'question-text';
-    qText.textContent = 'A university is considering introducing a policy that requires all students to complete a portion of their coursework in groups rather than individually. The aim is to improve collaboration, communication skills, and learning outcomes.';
-    card.appendChild(qText);
-
-    var qSub = document.createElement('div');
-    qSub.className = 'question-sub';
-    qSub.innerHTML =
-        '<strong>Do you think this policy would be effective in improving students\u2019 academic performance?</strong>' +
-        '<br><br>Write a response of approximately 150\u2013200 words in which you:' +
-        '<ul>' +
-        '<li>Clearly state your position (agree or disagree)</li>' +
-        '<li>Provide at least two reasons to support your answer</li>' +
-        '<li>Consider at least one possible limitation or drawback of your position</li>' +
-        '</ul>';
-    card.appendChild(qSub);
-
-    var ta = document.createElement('textarea');
-    ta.placeholder = 'Write your response here\u2026';
-    ta.value = state.response.initialText;
-    card.appendChild(ta);
-
-    var wc = document.createElement('div');
-    wc.className = 'word-count';
-    wc.textContent = countWords(ta.value) + ' / 150\u2013200 words';
-    card.appendChild(wc);
-
-    ta.addEventListener('input', function () {
-        var count = countWords(ta.value);
-        wc.textContent = count + ' / 150\u2013200 words';
-        wc.className = 'word-count';
-        if (count > 0 && count < 120) wc.classList.add('warn');
-        else if (count >= 150 && count <= 200) wc.classList.add('good');
-        else if (count > 220) wc.classList.add('over');
-        ta.classList.remove('error');
-        errMsg.classList.remove('visible');
-    });
-
-    var errMsg = document.createElement('p');
-    errMsg.className = 'field-error';
-    errMsg.textContent = 'Please write a response before continuing.';
-    card.appendChild(errMsg);
-
-    var btn = document.createElement('button');
-    btn.className = 'btn btn-primary';
-    btn.textContent = 'Submit Response';
-    btn.addEventListener('click', function () {
-        var text = ta.value.trim();
-        if (!text || countWords(text) < 20) {
-            ta.classList.add('error');
-            errMsg.textContent = 'Please write a more complete response (at least a few sentences).';
-            errMsg.classList.add('visible');
-            ta.focus();
-            return;
-        }
-        state.response.initialText = text;
-        state.phase = 'CONF_PRE';
-        render();
-    });
-    card.appendChild(btn);
-    mount(card);
-}
-
-
-/* =========================================================================
-   PRE-FEEDBACK CONFIDENCE
-========================================================================= */
-function renderConfPre() {
-    var card = createCard(PHASE_LABELS['CONF_PRE']);
-
-    // Show their response
-    card.appendChild(buildAnswerBox('Your response', state.response.initialText));
-
-    var slider = buildSlider(
-        'How confident are you that your response is strong and well-reasoned?',
-        state.response.preConfidence,
-        1, 7,
-        '1 = Not at all confident',
-        '7 = Extremely confident'
-    );
-    card.appendChild(slider.el);
-
-    var btn = document.createElement('button');
-    btn.className = 'btn btn-primary';
-    btn.textContent = 'Submit and receive AI feedback';
-    btn.addEventListener('click', function () {
-        state.response.preConfidence = slider.getValue();
-        state.phase = 'FEEDBACK';
-        render();
-    });
-    card.appendChild(btn);
-    mount(card);
-}
-
-
-/* =========================================================================
-   AI FEEDBACK (loading → display)
-========================================================================= */
-function renderFeedback() {
-    var card = createCard(PHASE_LABELS['FEEDBACK']);
-
-    if (!state.feedbackShown) {
-        // Loading state
-        var spinner = document.createElement('div');
-        spinner.className = 'spinner-section';
-        spinner.innerHTML =
-            '<div class="spinner"></div>' +
-            '<p class="spinner-text">AI is analysing your response\u2026</p>';
-        card.appendChild(spinner);
-        mount(card);
-
-        setTimeout(function () {
-            state.response.aiFeedback = FEEDBACK_TEXT;
-            state.feedbackShown = true;
-            render();
-        }, 2500);
-
-    } else {
-        // Show feedback
-        card.appendChild(buildAnswerBox('Your response', state.response.initialText));
-
-        var fbBox = document.createElement('div');
-        fbBox.className = 'ai-feedback-box';
-        var fbHeader = document.createElement('div');
-        fbHeader.className = 'ai-feedback-header';
-        fbHeader.textContent = 'AI Assessment';
-        var fbText = document.createElement('p');
-        fbText.className = 'ai-feedback-text';
-        fbText.textContent = state.response.aiFeedback;
-        fbBox.appendChild(fbHeader);
-        fbBox.appendChild(fbText);
-        card.appendChild(fbBox);
-
-        var btn = document.createElement('button');
-        btn.className = 'btn btn-primary';
-        btn.textContent = 'Continue';
-        btn.addEventListener('click', function () {
-            state.phase = 'CONF_POST';
-            render();
+function buildLikertTable(statements, stateObj, prefix) {
+    var table = document.createElement('table'); table.className = 'likert-table';
+    var thead = document.createElement('thead'); var hr = document.createElement('tr');
+    var th0 = document.createElement('th'); th0.textContent = 'Statement'; th0.style.width = '40%'; hr.appendChild(th0);
+    LIKERT_OPTIONS.forEach(function (lo) { var th = document.createElement('th'); th.textContent = lo; th.style.width = '12%'; hr.appendChild(th); });
+    thead.appendChild(hr); table.appendChild(thead);
+    var tbody = document.createElement('tbody');
+    statements.forEach(function (stmt, i) {
+        var tr = document.createElement('tr'); tr.id = prefix + '-row-' + i;
+        var td0 = document.createElement('td'); td0.textContent = stmt; tr.appendChild(td0);
+        LIKERT_OPTIONS.forEach(function (lo) {
+            var td = document.createElement('td');
+            var radio = document.createElement('input'); radio.type = 'radio'; radio.name = prefix + '_' + i; radio.value = lo; radio.className = 'likert-radio';
+            radio.addEventListener('change', function () { stateObj[i] = lo; tr.classList.remove('error-row'); });
+            if (stateObj[i] === lo) radio.checked = true;
+            td.appendChild(radio); tr.appendChild(td);
         });
-        card.appendChild(btn);
-        mount(card);
+        tbody.appendChild(tr);
+    });
+    table.appendChild(tbody); return table;
+}
+
+
+function render() {
+    scrollTo(0, 0); updateProgress();
+    document.getElementById('app').innerHTML = '';
+    switch (state.phase) {
+        case 'CONSENT':         renderConsent(); break;
+        case 'DEMO':            renderDemo(); break;
+        case 'WRITE':           renderWrite(); break;
+        case 'CONF_PRE':        renderConfPre(); break;
+        case 'FEEDBACK':        renderFeedback(); break;
+        case 'CHANGE_DECISION': renderChangeDecision(); break;
+        case 'CONF_POST':       renderConfPost(); break;
+        case 'REVISION_EXTENT': renderRevisionExtent(); break;
+        case 'AI_FAM':          renderAiFam(); break;
+        case 'SELF_EFFICACY':   renderSelfEfficacy(); break;
+        case 'DONE':            renderDone(); break;
+        case 'DECLINED':        renderDeclined(); break;
     }
 }
 
 
-/* =========================================================================
-   POST-FEEDBACK CONFIDENCE
-========================================================================= */
-function renderConfPost() {
-    var card = createCard(PHASE_LABELS['CONF_POST']);
+function renderConsent() {
+    var card = createCard('Informed Consent');
 
-    card.appendChild(buildAnswerBox('Your response', state.response.initialText));
+    var title = document.createElement('p');
+    title.className = 'question-text';
+    title.textContent = 'Informed Consent to Participate in Research Study';
+    card.appendChild(title);
 
-    var slider = buildSlider(
-        'After reading the AI feedback, how confident are you in your response?',
-        state.response.postConfidence,
-        1, 7,
-        '1 = Not at all confident',
-        '7 = Extremely confident'
-    );
-    card.appendChild(slider.el);
+    var body = document.createElement('div');
+    body.className = 'consent-body';
+    body.innerHTML =
+        '<p><strong>Study Title:</strong> When Students Disagree With AI Feedback: Effects on Answer Revision and the Moderating Roles of Algorithmic Authority and Academic Self-Efficacy</p>' +
+        '<p><strong>Researcher:</strong> Natalie Hlatshwayo</p>' +
+        '<p><strong>Institution:</strong> University of Cape Town</p>' +
+        '<p>You are invited to participate in a research study exploring how university students respond to AI-generated academic feedback. Your participation is voluntary.</p>' +
 
-    var btn = document.createElement('button');
-    btn.className = 'btn btn-primary';
-    btn.textContent = 'Continue';
-    btn.addEventListener('click', function () {
-        state.response.postConfidence = slider.getValue();
-        state.phase = 'REVISE_ASK';
-        render();
-    });
-    card.appendChild(btn);
-    mount(card);
-}
+        '<h3>What participation involves</h3>' +
+        '<p>If you agree to participate, you will be asked to:</p>' +
+        '<ul>' +
+        '<li>Complete an academic task or question.</li>' +
+        '<li>View AI-generated feedback related to your response.</li>' +
+        '<li>Answer short questionnaire items about your reactions, experiences, and perceptions.</li>' +
+        '<li>Complete brief rating scales.</li>' +
+        '</ul>' +
+        '<p>The study is expected to take approximately 10\u201315 minutes.</p>' +
 
+        '<h3>Voluntary participation</h3>' +
+        '<p>Your participation is entirely voluntary. You may decline to participate or withdraw at any time before submitting your responses, without penalty or disadvantage.</p>' +
 
-/* =========================================================================
-   REVISE ASK — Yes / No
-========================================================================= */
-function renderReviseAsk() {
-    var card = createCard(PHASE_LABELS['REVISE_ASK']);
+        '<h3>Risks and discomforts</h3>' +
+        '<p>This study involves minimal risk. Some participants may experience minor discomfort when receiving feedback or reflecting on their academic confidence.</p>' +
 
-    var prompt = document.createElement('p');
-    prompt.className = 'question-text';
-    prompt.textContent = 'Would you like to revise your response based on the AI feedback?';
-    card.appendChild(prompt);
+        '<h3>Benefits</h3>' +
+        '<p>Although there may be no direct personal benefit, your participation may contribute to knowledge about how students interact with AI feedback in higher education.</p>' +
+
+        '<h3>Confidentiality</h3>' +
+        '<p>Your responses will be treated confidentially and used for research purposes only. No personally identifying information will be reported in the results.</p>' +
+
+        '<h3>Data storage</h3>' +
+        '<p>Data will be securely stored and accessed only by the researcher and authorised academic supervisors, in line with university research ethics requirements.</p>' +
+
+        '<h3>Questions</h3>' +
+        '<p>If you have any questions about the study, you may contact the researcher.</p>';
+    card.appendChild(body);
+
+    var stmt = document.createElement('div');
+    stmt.className = 'consent-statement';
+    stmt.innerHTML =
+        'By selecting <strong>\u201CI agree\u201D</strong> below, you confirm that:<br>' +
+        '\u2022 You have read and understood the information above.<br>' +
+        '\u2022 You are participating voluntarily.<br>' +
+        '\u2022 You are 18 years or older.<br>' +
+        '\u2022 You consent to participate in this study.';
+    card.appendChild(stmt);
 
     var selected = null;
     var list = document.createElement('div');
     list.className = 'options-list';
 
-    var btnNext = document.createElement('button');
-    btnNext.className = 'btn btn-primary';
-    btnNext.textContent = 'Continue';
-    btnNext.disabled = true;
+    var btn = document.createElement('button');
+    btn.className = 'btn btn-primary';
+    btn.textContent = 'Continue';
+    btn.disabled = true;
 
     var opts = [
-        { value: 'yes', label: 'Yes, I would like to revise my response' },
-        { value: 'no',  label: 'No, I would like to keep my original response' }
+        { value: 'agree', label: 'I agree to participate' },
+        { value: 'decline', label: 'I do not agree to participate' }
     ];
 
     opts.forEach(function (o) {
@@ -1185,376 +840,325 @@ function renderReviseAsk() {
             });
             row.classList.add('selected');
             row.querySelector('.option-radio-inner').style.display = 'block';
-            btnNext.disabled = false;
+            btn.disabled = false;
         });
         list.appendChild(row);
     });
-
     card.appendChild(list);
 
-    btnNext.addEventListener('click', function () {
-        state.response.revisedChoice = selected;
-        if (selected === 'yes') {
-            state.phase = 'REVISE_EDIT';
-        } else {
-            state.response.revisedText = state.response.initialText;
-            state.phase = 'REASON';
-        }
-        render();
-    });
-    card.appendChild(btnNext);
-    mount(card);
-}
-
-
-/* =========================================================================
-   REVISE EDIT — Textarea with original pre-filled
-========================================================================= */
-function renderReviseEdit() {
-    var card = createCard(PHASE_LABELS['REVISE_EDIT']);
-
-    var qText = document.createElement('p');
-    qText.className = 'question-text';
-    qText.textContent = 'Please revise your response below.';
-    card.appendChild(qText);
-
-    // Show original for reference
-    card.appendChild(buildAnswerBox('Your original response', state.response.initialText));
-
-    var lbl = document.createElement('label');
-    lbl.className = 'textarea-label';
-    lbl.textContent = 'Revised response (150\u2013200 words):';
-    card.appendChild(lbl);
-
-    var ta = document.createElement('textarea');
-    ta.value = state.response.revisedText || state.response.initialText;
-    card.appendChild(ta);
-
-    var wc = document.createElement('div');
-    wc.className = 'word-count';
-    wc.textContent = countWords(ta.value) + ' / 150\u2013200 words';
-    card.appendChild(wc);
-
-    ta.addEventListener('input', function () {
-        var count = countWords(ta.value);
-        wc.textContent = count + ' / 150\u2013200 words';
-        wc.className = 'word-count';
-        if (count > 0 && count < 120) wc.classList.add('warn');
-        else if (count >= 150 && count <= 200) wc.classList.add('good');
-        else if (count > 220) wc.classList.add('over');
-    });
-
-    var errMsg = document.createElement('p');
-    errMsg.className = 'field-error';
-    errMsg.textContent = 'Please write a revised response.';
-    card.appendChild(errMsg);
-
-    var btn = document.createElement('button');
-    btn.className = 'btn btn-primary';
-    btn.textContent = 'Submit Revised Response';
     btn.addEventListener('click', function () {
-        var text = ta.value.trim();
-        if (!text || countWords(text) < 20) {
-            ta.classList.add('error');
-            errMsg.classList.add('visible');
-            ta.focus();
-            return;
-        }
-        state.response.revisedText = text;
-        state.phase = 'REASON';
+        if (selected === 'decline') { state.phase = 'DECLINED'; }
+        else { state.phase = 'DEMO'; }
         render();
     });
     card.appendChild(btn);
     mount(card);
 }
 
-
-/* =========================================================================
-   REASON — What best explains your decision?
-========================================================================= */
-function renderReason() {
-    var card = createCard(PHASE_LABELS['REASON']);
-
-    var qText = document.createElement('p');
-    qText.className = 'question-text';
-    qText.textContent = 'What best explains your decision?';
-    card.appendChild(qText);
-
-    var selected = state.response.reason;
-    var list = document.createElement('div');
-    list.className = 'options-list';
-
-    var otherContainer = document.createElement('div');
-    otherContainer.style.display = 'none';
-
-    var otherTa = document.createElement('textarea');
-    otherTa.className = 'other-textarea';
-    otherTa.placeholder = 'Please explain\u2026';
-    otherTa.value = state.response.reasonOtherText;
-    otherContainer.appendChild(otherTa);
-
-    var errMsg = document.createElement('p');
-    errMsg.className = 'field-error';
-    errMsg.textContent = 'Please select an option.';
-    card.appendChild(errMsg); // we'll position it after list
-
-    var btnNext = document.createElement('button');
-    btnNext.className = 'btn btn-primary';
-    btnNext.textContent = 'Continue';
-    btnNext.disabled = !selected;
-
-    REASON_OPTIONS.forEach(function (opt) {
-        var row = buildOptionRow(opt, opt === selected, function () {
-            selected = opt;
-            list.querySelectorAll('.option-row').forEach(function (r) {
-                r.classList.remove('selected');
-                r.querySelector('.option-radio-inner').style.display = 'none';
-            });
-            row.classList.add('selected');
-            row.querySelector('.option-radio-inner').style.display = 'block';
-            btnNext.disabled = false;
-            errMsg.classList.remove('visible');
-
-            if (opt === 'Other') {
-                otherContainer.style.display = 'block';
-                otherTa.focus();
-            } else {
-                otherContainer.style.display = 'none';
-            }
-        });
-        list.appendChild(row);
-    });
-
-    card.appendChild(list);
-    card.appendChild(otherContainer);
-
-    var errOther = document.createElement('p');
-    errOther.className = 'field-error';
-    errOther.textContent = 'Please provide an explanation.';
-    card.appendChild(errOther);
-
-    btnNext.addEventListener('click', function () {
-        if (!selected) {
-            errMsg.classList.add('visible');
-            return;
-        }
-        if (selected === 'Other' && !otherTa.value.trim()) {
-            otherTa.classList.add('error');
-            errOther.classList.add('visible');
-            otherTa.focus();
-            return;
-        }
-        state.response.reason = selected;
-        state.response.reasonOtherText = (selected === 'Other') ? otherTa.value.trim() : '';
-        state.phase = 'AI_FAM';
-        render();
-    });
-    card.appendChild(btnNext);
-    mount(card);
+function renderDeclined() {
+    var card = createCard('');
+    var c = document.createElement('div');
+    c.className = 'decline-content';
+    var h = document.createElement('h2');
+    h.textContent = 'Thank you for your time.';
+    var p = document.createElement('p');
+    p.textContent = 'You have chosen not to participate in this study. You may close this page. If you have any questions, please contact the researcher.';
+    c.appendChild(h); c.appendChild(p);
+    card.appendChild(c); mount(card);
 }
 
 
-/* =========================================================================
-   AI FAMILIARITY — Likert scale
-========================================================================= */
+function renderDemo() {
+    var card = createCard('Demographics');
+    var q = document.createElement('p'); q.className = 'question-text'; q.textContent = 'Please provide the following information before we begin.'; card.appendChild(q);
+
+    var fg1 = document.createElement('div'); fg1.className = 'form-group';
+    var l1 = document.createElement('label'); l1.className = 'form-label'; l1.textContent = 'Faculty'; fg1.appendChild(l1);
+    var s1 = document.createElement('select'); s1.id = 'demo-fac';
+    var o0 = document.createElement('option'); o0.value = ''; o0.textContent = '\u2014 Select your faculty \u2014'; o0.disabled = true; o0.selected = true; s1.appendChild(o0);
+    FACULTIES.forEach(function (f) { var o = document.createElement('option'); o.value = f; o.textContent = f; s1.appendChild(o); });
+    fg1.appendChild(s1);
+    var e1 = document.createElement('p'); e1.className = 'field-error'; e1.textContent = 'Please select your faculty.'; fg1.appendChild(e1);
+    card.appendChild(fg1);
+
+    var fg2 = document.createElement('div'); fg2.className = 'form-group';
+    var l2 = document.createElement('label'); l2.className = 'form-label'; l2.textContent = 'Year of Study'; fg2.appendChild(l2);
+    var s2 = document.createElement('select'); s2.id = 'demo-yr';
+    var oy0 = document.createElement('option'); oy0.value = ''; oy0.textContent = '\u2014 Select your year of study \u2014'; oy0.disabled = true; oy0.selected = true; s2.appendChild(oy0);
+    ['1st Year', '2nd Year', '3rd Year', '4th Year', '5th Year'].forEach(function (y) { var o = document.createElement('option'); o.value = y; o.textContent = y; s2.appendChild(o); });
+    fg2.appendChild(s2);
+    var e2 = document.createElement('p'); e2.className = 'field-error'; e2.textContent = 'Please select your year of study.'; fg2.appendChild(e2);
+    card.appendChild(fg2);
+
+    var btn = document.createElement('button'); btn.className = 'btn btn-primary'; btn.textContent = 'Continue';
+    btn.addEventListener('click', function () {
+        var v = true;
+        if (!s1.value) { s1.classList.add('error'); e1.classList.add('visible'); v = false; } else { s1.classList.remove('error'); e1.classList.remove('visible'); }
+        if (!s2.value) { s2.classList.add('error'); e2.classList.add('visible'); v = false; } else { s2.classList.remove('error'); e2.classList.remove('visible'); }
+        if (!v) return;
+        state.demo.faculty = s1.value; state.demo.yearOfStudy = s2.value;
+        state.phase = 'WRITE'; render();
+    });
+    card.appendChild(btn); mount(card);
+}
+
+
+function renderWrite() {
+    var card = createCard(PHASE_LABELS['WRITE']);
+    var q = document.createElement('p'); q.className = 'question-text';
+    q.textContent = 'A university is considering introducing a policy that requires all students to complete a portion of their coursework in groups rather than individually. The aim is to improve collaboration, communication skills, and learning outcomes.';
+    card.appendChild(q);
+    var sub = document.createElement('div'); sub.className = 'question-sub';
+    sub.innerHTML = '<strong>Do you think this policy would be effective in improving students\u2019 academic performance?</strong><br><br>Write a response of approximately 150\u2013200 words in which you:<ul><li>Clearly state your position (agree or disagree)</li><li>Provide at least two reasons to support your answer</li><li>Consider at least one possible limitation or drawback of your position</li></ul>';
+    card.appendChild(sub);
+
+    var ta = document.createElement('textarea'); ta.placeholder = 'Write your response here\u2026'; ta.value = state.response.initialText; card.appendChild(ta);
+    var wc = document.createElement('div'); wc.className = 'word-count'; wc.textContent = countWords(ta.value) + ' / 150\u2013200 words'; card.appendChild(wc);
+    ta.addEventListener('input', function () {
+        var c = countWords(ta.value); wc.textContent = c + ' / 150\u2013200 words'; wc.className = 'word-count';
+        if (c > 0 && c < 120) wc.classList.add('warn'); else if (c >= 150 && c <= 200) wc.classList.add('good'); else if (c > 220) wc.classList.add('over');
+        ta.classList.remove('error'); err.classList.remove('visible');
+    });
+    var err = document.createElement('p'); err.className = 'field-error'; err.textContent = 'Please write a more complete response (at least a few sentences).'; card.appendChild(err);
+
+    var btn = document.createElement('button'); btn.className = 'btn btn-primary'; btn.textContent = 'Submit Response';
+    btn.addEventListener('click', function () {
+        var t = ta.value.trim();
+        if (!t || countWords(t) < 20) { ta.classList.add('error'); err.classList.add('visible'); ta.focus(); return; }
+        state.response.initialText = t; state.phase = 'CONF_PRE'; render();
+    });
+    card.appendChild(btn); mount(card);
+}
+
+
+function renderConfPre() {
+    var card = createCard(PHASE_LABELS['CONF_PRE']);
+    card.appendChild(buildAnswerBox('Your response', state.response.initialText));
+    var sl = buildSlider('How confident are you that your response is strong and well-reasoned?', state.response.preConfidence, 1, 7, '1 = Not at all confident', '7 = Extremely confident');
+    card.appendChild(sl.el);
+    var btn = document.createElement('button'); btn.className = 'btn btn-primary'; btn.textContent = 'Submit and receive AI feedback';
+    btn.addEventListener('click', function () { state.response.preConfidence = sl.getValue(); state.phase = 'FEEDBACK'; render(); });
+    card.appendChild(btn); mount(card);
+}
+
+
+function renderFeedback() {
+    var card = createCard(PHASE_LABELS['FEEDBACK']);
+    if (!state.feedbackShown) {
+        var sp = document.createElement('div'); sp.className = 'spinner-section';
+        sp.innerHTML = '<div class="spinner"></div><p class="spinner-text">AI is analysing your response\u2026</p>';
+        card.appendChild(sp); mount(card);
+        setTimeout(function () { state.response.aiFeedback = FEEDBACK_TEXT; state.feedbackShown = true; render(); }, 2500);
+    } else {
+        card.appendChild(buildAnswerBox('Your response', state.response.initialText));
+        var fb = document.createElement('div'); fb.className = 'ai-feedback-box';
+        var fh = document.createElement('div'); fh.className = 'ai-feedback-header'; fh.textContent = 'AI Assessment';
+        var ft = document.createElement('p'); ft.className = 'ai-feedback-text'; ft.textContent = state.response.aiFeedback;
+        fb.appendChild(fh); fb.appendChild(ft); card.appendChild(fb);
+        var btn = document.createElement('button'); btn.className = 'btn btn-primary'; btn.textContent = 'Continue';
+        btn.addEventListener('click', function () { state.phase = 'CHANGE_DECISION'; render(); });
+        card.appendChild(btn); mount(card);
+    }
+}
+
+
+function renderChangeDecision() {
+    var card = createCard(PHASE_LABELS['CHANGE_DECISION']);
+    var q = document.createElement('p'); q.className = 'question-text';
+    q.textContent = 'Would you like to change your answer after receiving the AI feedback?';
+    card.appendChild(q);
+
+    var selected = null;
+    var list = document.createElement('div'); list.className = 'options-list';
+    var btn = document.createElement('button'); btn.className = 'btn btn-primary'; btn.textContent = 'Continue'; btn.disabled = true;
+
+    [{ value: 'yes', label: 'Yes' }, { value: 'no', label: 'No' }].forEach(function (o) {
+        var row = buildOptionRow(o.label, false, function () {
+            selected = o.value;
+            list.querySelectorAll('.option-row').forEach(function (r) { r.classList.remove('selected'); r.querySelector('.option-radio-inner').style.display = 'none'; });
+            row.classList.add('selected'); row.querySelector('.option-radio-inner').style.display = 'block'; btn.disabled = false;
+        });
+        list.appendChild(row);
+    });
+    card.appendChild(list);
+
+    btn.addEventListener('click', function () {
+        state.response.changeDecision = selected;
+        state.phase = 'CONF_POST'; render();
+    });
+    card.appendChild(btn); mount(card);
+}
+
+
+function renderConfPost() {
+    var card = createCard(PHASE_LABELS['CONF_POST']);
+    card.appendChild(buildAnswerBox('Your response', state.response.initialText));
+    var sl = buildSlider('After receiving the AI feedback, how confident are you in your response?', state.response.postConfidence, 1, 7, '1 = Not at all confident', '7 = Extremely confident');
+    card.appendChild(sl.el);
+    var btn = document.createElement('button'); btn.className = 'btn btn-primary'; btn.textContent = 'Continue';
+    btn.addEventListener('click', function () { state.response.postConfidence = sl.getValue(); state.phase = 'REVISION_EXTENT'; render(); });
+    card.appendChild(btn); mount(card);
+}
+
+
+function renderRevisionExtent() {
+    var card = createCard(PHASE_LABELS['REVISION_EXTENT']);
+    var q = document.createElement('p'); q.className = 'question-text';
+    q.textContent = 'To what extent would you revise your original answer?';
+    card.appendChild(q);
+
+    var sl = buildSlider(
+        'Select the level of revision you would make:',
+        state.response.revisionExtent, 1, 7,
+        '1 = Do not change at all',
+        '7 = Change completely'
+    );
+    card.appendChild(sl.el);
+
+    /* Show scale labels */
+    var labels = document.createElement('div');
+    labels.className = 'question-sub';
+    labels.style.marginTop = '-12px';
+    labels.innerHTML =
+        '<strong>Scale guide:</strong><br>' +
+        '1 = Do not change at all<br>' +
+        '2 = Change very slightly<br>' +
+        '3 = Correct minor errors<br>' +
+        '4 = Make small revisions<br>' +
+        '5 = Make moderate revisions<br>' +
+        '6 = Make major revisions<br>' +
+        '7 = Change completely';
+    card.appendChild(labels);
+
+    var btn = document.createElement('button'); btn.className = 'btn btn-primary'; btn.textContent = 'Continue';
+    btn.addEventListener('click', function () { state.response.revisionExtent = sl.getValue(); state.phase = 'AI_FAM'; render(); });
+    card.appendChild(btn); mount(card);
+}
+
+
 function renderAiFam() {
     var card = createCard(PHASE_LABELS['AI_FAM']);
+    var q = document.createElement('p'); q.className = 'question-text';
+    q.textContent = 'Please indicate the extent to which you agree with the following statements about AI-generated academic feedback.';
+    card.appendChild(q);
+    card.appendChild(buildLikertTable(AI_STATEMENTS, state.aiFamiliarity, 'aifam'));
 
-    var qText = document.createElement('p');
-    qText.className = 'question-text';
-    qText.textContent = 'Please indicate the extent to which you agree with the following statements about AI-generated academic feedback.';
-    card.appendChild(qText);
-
-    var table = document.createElement('table');
-    table.className = 'likert-table';
-
-    // Header
-    var thead = document.createElement('thead');
-    var headerRow = document.createElement('tr');
-    var thStatement = document.createElement('th');
-    thStatement.textContent = 'Statement';
-    thStatement.style.width = '40%';
-    headerRow.appendChild(thStatement);
-
-    LIKERT_OPTIONS.forEach(function (lo) {
-        var th = document.createElement('th');
-        th.textContent = lo;
-        th.style.width = '12%';
-        headerRow.appendChild(th);
-    });
-    thead.appendChild(headerRow);
-    table.appendChild(thead);
-
-    // Body
-    var tbody = document.createElement('tbody');
-
-    AI_STATEMENTS.forEach(function (stmt, sIdx) {
-        var tr = document.createElement('tr');
-        tr.id = 'likert-row-' + sIdx;
-
-        var tdStmt = document.createElement('td');
-        tdStmt.textContent = stmt;
-        tr.appendChild(tdStmt);
-
-        LIKERT_OPTIONS.forEach(function (lo, lIdx) {
-            var td = document.createElement('td');
-            var radio = document.createElement('input');
-            radio.type = 'radio';
-            radio.name = 'likert_' + sIdx;
-            radio.value = lo;
-            radio.className = 'likert-radio';
-            radio.addEventListener('change', function () {
-                state.aiFamiliarity[sIdx] = lo;
-                tr.classList.remove('error-row');
-            });
-            if (state.aiFamiliarity[sIdx] === lo) radio.checked = true;
-            td.appendChild(radio);
-            tr.appendChild(td);
-        });
-
-        tbody.appendChild(tr);
-    });
-
-    table.appendChild(tbody);
-    card.appendChild(table);
-
-    var errMsg = document.createElement('p');
-    errMsg.className = 'field-error';
-    errMsg.textContent = 'Please respond to all statements before continuing.';
-    card.appendChild(errMsg);
-
-    var btn = document.createElement('button');
-    btn.className = 'btn btn-primary';
-    btn.textContent = 'Submit and Finish';
+    var err = document.createElement('p'); err.className = 'field-error'; err.textContent = 'Please respond to all statements before continuing.'; card.appendChild(err);
+    var btn = document.createElement('button'); btn.className = 'btn btn-primary'; btn.textContent = 'Continue';
     btn.addEventListener('click', function () {
-        var allAnswered = true;
-        AI_STATEMENTS.forEach(function (_, sIdx) {
-            if (!state.aiFamiliarity.hasOwnProperty(sIdx)) {
-                allAnswered = false;
-                var row = document.getElementById('likert-row-' + sIdx);
-                if (row) row.classList.add('error-row');
-            }
-        });
-
-        if (!allAnswered) {
-            errMsg.classList.add('visible');
-            return;
-        }
-
-        state.phase = 'DONE';
-        render();
-        submitData();
+        var ok = true;
+        AI_STATEMENTS.forEach(function (_, i) { if (!state.aiFamiliarity.hasOwnProperty(i)) { ok = false; var r = document.getElementById('aifam-row-' + i); if (r) r.classList.add('error-row'); } });
+        if (!ok) { err.classList.add('visible'); return; }
+        state.phase = 'SELF_EFFICACY'; render();
     });
-    card.appendChild(btn);
-    mount(card);
+    card.appendChild(btn); mount(card);
+}
+
+function renderSelfEfficacy() {
+    var card = createCard(PHASE_LABELS['SELF_EFFICACY']);
+    var q = document.createElement('p'); q.className = 'question-text';
+    q.textContent = 'Please indicate the extent to which you agree with the following statements about your academic abilities.';
+    card.appendChild(q);
+    card.appendChild(buildLikertTable(ASE_STATEMENTS, state.selfEfficacy, 'ase'));
+
+    var err = document.createElement('p'); err.className = 'field-error'; err.textContent = 'Please respond to all statements before continuing.'; card.appendChild(err);
+    var btn = document.createElement('button'); btn.className = 'btn btn-primary'; btn.textContent = 'Submit and Finish';
+    btn.addEventListener('click', function () {
+        var ok = true;
+        ASE_STATEMENTS.forEach(function (_, i) { if (!state.selfEfficacy.hasOwnProperty(i)) { ok = false; var r = document.getElementById('ase-row-' + i); if (r) r.classList.add('error-row'); } });
+        if (!ok) { err.classList.add('visible'); return; }
+        state.phase = 'DONE'; render(); submitData();
+    });
+    card.appendChild(btn); mount(card);
 }
 
 
-/* =========================================================================
-   DONE — Debrief / Thank You
-========================================================================= */
 function renderDone() {
     var card = createCard('');
 
-    var content = document.createElement('div');
-    content.className = 'thankyou-content';
+    var top = document.createElement('div'); top.className = 'thankyou-content';
+    var circle = document.createElement('div'); circle.className = 'check-circle';
+    circle.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+    var h2 = document.createElement('h2'); h2.textContent = 'Thank You for Participating';
+    var p1 = document.createElement('p'); p1.textContent = 'Your responses have been recorded successfully.';
+    var statusP = document.createElement('p'); statusP.id = 'submit-status'; statusP.style.fontSize = '13px'; statusP.style.fontWeight = '700'; statusP.style.marginTop = '8px'; statusP.textContent = 'Saving responses\u2026'; statusP.style.color = '#6b7280';
+    top.appendChild(circle); top.appendChild(h2); top.appendChild(p1); top.appendChild(statusP);
+    card.appendChild(top);
 
-    var circle = document.createElement('div');
-    circle.className = 'check-circle';
-    circle.innerHTML =
-        '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" ' +
-        'stroke-linecap="round" stroke-linejoin="round">' +
-        '<polyline points="20 6 9 17 4 12"></polyline></svg>';
+    var hr = document.createElement('hr'); hr.className = 'divider'; card.appendChild(hr);
 
-    var h2 = document.createElement('h2');
-    h2.textContent = 'Thank You for Participating';
+    var db = document.createElement('div'); db.className = 'debrief-body';
+    db.innerHTML =
+        '<h3>Debriefing Form</h3>' +
+        '<p><strong>Study Title:</strong> When Students Disagree with AI Feedback: Effects on Decision Override Behaviour and the Moderating Roles of Algorithmic Authority and Academic Self-Efficacy</p>' +
 
-    var p1 = document.createElement('p');
-    p1.textContent = 'Your responses have been recorded successfully.';
+        '<p>Dear Participant,</p>' +
+        '<p>Thank you for taking part in this study. Your participation is sincerely appreciated. The purpose of this research is to better understand how university students respond to feedback generated by Artificial Intelligence (AI), particularly when such feedback may differ from their own original responses. The study also explores whether factors such as beliefs about AI authority and levels of academic self-efficacy influence these decisions.</p>' +
 
-    var hr = document.createElement('hr');
-    hr.className = 'divider';
+        '<p>During the study, you were asked to complete an academic task, view AI-generated feedback, and indicate whether or not you would revise your response. Some aspects of the study could not be fully explained beforehand, as doing so may have influenced your natural responses. This is common in behavioural research where prior knowledge of the study aims may affect results.</p>' +
 
-    var debrief = document.createElement('div');
-    debrief.style.textAlign = 'left';
-    debrief.style.maxWidth = '560px';
-    debrief.style.margin = '0 auto';
+        '<h3>Why This Research Matters</h3>' +
+        '<p>As AI tools are increasingly used in higher education, students are often required to evaluate, trust, reject, or revise work based on AI-generated feedback. Understanding how students make these decisions can help universities and developers design AI systems that support learning while preserving student autonomy, confidence, and critical thinking.</p>' +
 
-    var dh = document.createElement('p');
-    dh.className = 'question-text';
-    dh.style.fontSize = '16px';
-    dh.style.marginBottom = '12px';
-    dh.textContent = 'Debriefing';
+        '<h3>Confidentiality</h3>' +
+        '<p>All information collected during this study will remain confidential. Your responses will be anonymised, meaning no personally identifying information will be linked to your data. Results will be reported in aggregate form for academic purposes only.</p>' +
 
-    var dt = document.createElement('p');
-    dt.style.fontSize = '14px';
-    dt.style.color = '#374151';
-    dt.style.lineHeight = '1.7';
-    dt.innerHTML =
-        'This study examined how AI-generated feedback influences academic decision-making and confidence. ' +
-        '<strong>Important:</strong> The AI feedback you received was <strong>pre-scripted</strong> and was ' +
-        '<strong>not</strong> based on an actual analysis of your written response. It was randomly assigned ' +
-        'as either positive or negative feedback regardless of the quality of your answer.<br><br>' +
-        'The purpose of this design was to investigate whether the tone of AI feedback affects students\u2019 ' +
-        'willingness to revise their work and their confidence levels.<br><br>' +
-        'If you have any questions or concerns about this study, please contact the researcher. ' +
-        'Thank you for your valuable contribution to this research.';
+        '<h3>Voluntary Participation</h3>' +
+        '<p>Your participation was entirely voluntary. If you feel uncomfortable about any aspect of the study or wish to withdraw your data after participation, you may contact the researcher using the details below within the permitted withdrawal period.</p>' +
 
-    debrief.appendChild(dh);
-    debrief.appendChild(dt);
+        '<h3>Support and Wellbeing</h3>' +
+        '<p>This study involved normal academic decision-making tasks and minimal risk. However, if participation caused any discomfort, stress, or concern, you are encouraged to seek support through your university counselling or student wellness services.</p>' +
 
-    content.appendChild(circle);
-    content.appendChild(h2);
-    content.appendChild(p1);
+        '<h3>Further Information</h3>' +
+        '<div class="contact-block">' +
+        '<p><strong>Researcher:</strong> Natalie Hlatshwayo</p>' +
+        '<p><strong>Department:</strong> Department of Organisational Psychology, University of Cape Town</p>' +
+        '<p><strong>Email:</strong> hltnat001@myuct.ac.za</p>' +
+        '</div>' +
+        '<div class="contact-block">' +
+        '<p><strong>Supervisor:</strong> Anton Schlechter</p>' +
+        '<p><strong>Department:</strong> Department of Organisational Psychology, University of Cape Town</p>' +
+        '<p><strong>Email:</strong> anton.schlechter@uct.ac.za</p>' +
+        '</div>' +
 
-    var statusP = document.createElement('p');
-    statusP.id = 'submit-status';
-    statusP.style.fontSize = '13px';
-    statusP.style.fontWeight = '700';
-    statusP.style.marginTop = '8px';
-    statusP.textContent = 'Saving responses\u2026';
-    statusP.style.color = '#6b7280';
-    content.appendChild(statusP);
-
-    content.appendChild(hr);
-    card.appendChild(content);
-    card.appendChild(debrief);
+        '<p style="margin-top:20px;">Your contribution helps advance understanding of how students interact with emerging AI technologies in education. Thank you for your time, insight, and participation.</p>';
+    card.appendChild(db);
     mount(card);
 }
 
 
-/* =========================================================================
-   DATA SUBMISSION
-========================================================================= */
 async function submitData() {
     var r = state.response;
-
     var payload = {
-        timestamp:              new Date().toISOString(),
-        faculty:                state.demo.faculty,
-        year_of_study:          state.demo.yearOfStudy,
-        feedback_condition:     FEEDBACK_CONDITION,
-        initial_response:       r.initialText,
-        pre_confidence:         r.preConfidence,
-        ai_feedback_text:       r.aiFeedback,
-        post_confidence:        r.postConfidence,
-        revised_choice:         r.revisedChoice,
-        final_response:         r.revisedChoice === 'yes' ? r.revisedText : r.initialText,
-        reason_for_decision:    r.reason,
-        reason_other_text:      r.reasonOtherText,
-        ai_fam_1:              state.aiFamiliarity[0] || '',
-        ai_fam_2:              state.aiFamiliarity[1] || '',
-        ai_fam_3:              state.aiFamiliarity[2] || '',
-        ai_fam_4:              state.aiFamiliarity[3] || '',
-        ai_fam_5:              state.aiFamiliarity[4] || '',
-        ai_fam_6:              state.aiFamiliarity[5] || ''
+        timestamp:           new Date().toISOString(),
+        faculty:             state.demo.faculty,
+        year_of_study:       state.demo.yearOfStudy,
+        feedback_condition:  FEEDBACK_CONDITION,
+        initial_response:    r.initialText,
+        pre_confidence:      r.preConfidence,
+        ai_feedback_text:    r.aiFeedback,
+        change_decision:     r.changeDecision,
+        post_confidence:     r.postConfidence,
+        revision_extent:     r.revisionExtent,
+        ai_fam_1:            state.aiFamiliarity[0] || '',
+        ai_fam_2:            state.aiFamiliarity[1] || '',
+        ai_fam_3:            state.aiFamiliarity[2] || '',
+        ai_fam_4:            state.aiFamiliarity[3] || '',
+        ai_fam_5:            state.aiFamiliarity[4] || '',
+        ai_fam_6:            state.aiFamiliarity[5] || '',
+        ase_1:               state.selfEfficacy[0] || '',
+        ase_2:               state.selfEfficacy[1] || '',
+        ase_3:               state.selfEfficacy[2] || '',
+        ase_4:               state.selfEfficacy[3] || '',
+        ase_5:               state.selfEfficacy[4] || '',
+        ase_6:               state.selfEfficacy[5] || '',
+        ase_7:               state.selfEfficacy[6] || '',
+        ase_8:               state.selfEfficacy[7] || ''
     };
 
     var statusEl = document.getElementById('submit-status');
 
     try {
-        /* Use a hidden form + iframe to avoid CORS/redirect issues
-           with Google Apps Script. This method is bulletproof. */
         var iframe = document.createElement('iframe');
         iframe.name = 'study-submit-frame';
         iframe.style.display = 'none';
@@ -1574,30 +1178,17 @@ async function submitData() {
         document.body.appendChild(form);
         form.submit();
 
-        /* Clean up after a short delay */
-        setTimeout(function () {
-            form.remove();
-            iframe.remove();
-        }, 5000);
+        setTimeout(function () { form.remove(); iframe.remove(); }, 5000);
 
-        console.log('[Study] Data submitted via form.', payload);
-        if (statusEl) {
-            statusEl.textContent = 'Responses saved successfully.';
-            statusEl.style.color = '#10b981';
-        }
+        console.log('[Study] Data submitted.', payload);
+        if (statusEl) { statusEl.textContent = 'Responses saved successfully.'; statusEl.style.color = '#10b981'; }
     } catch (err) {
         console.error('[Study] Submission failed:', err.message, payload);
-        if (statusEl) {
-            statusEl.textContent = 'Error saving responses. Please inform the researcher.';
-            statusEl.style.color = '#ef4444';
-        }
+        if (statusEl) { statusEl.textContent = 'Error saving responses. Please inform the researcher.'; statusEl.style.color = '#ef4444'; }
     }
 }
 
 
-/* =========================================================================
-   INIT
-========================================================================= */
 render();
 </script>
 </body>
