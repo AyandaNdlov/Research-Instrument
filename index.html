@@ -583,7 +583,8 @@
 
 <script>
 
-const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbyerylqiJBJx6k8NLU7BYnGSuBCauF2d7TdZ5c1bL-vsrMG7_4m3eYgNvsPM3KYJvxS/exec';
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycby7C1M4WE1JqAJOlQwArq_dm8DS-KahosVu8MPfqjy5aMWI8nGNs0qRve84sAw-5PzY/exec';
+
 
 const FEEDBACK_NEGATIVE =
     'Your response is not yet fully developed. While a position is stated, the reasoning could be ' +
@@ -596,7 +597,6 @@ const FEEDBACK_POSITIVE =
 
 const FEEDBACK_CONDITION = Math.random() < 0.5 ? 'positive' : 'negative';
 const FEEDBACK_TEXT = FEEDBACK_CONDITION === 'positive' ? FEEDBACK_POSITIVE : FEEDBACK_NEGATIVE;
-
 
 const FACULTIES = [
     'Commerce',
@@ -1008,9 +1008,9 @@ function renderRevisionExtent() {
 
     var sl = buildSlider(
         'Select the level of revision you would make:',
-        state.response.revisionExtent, 1, 7,
-        '1 = Do not change at all',
-        '7 = Change completely'
+        state.response.revisionExtent, 1, 6,
+        '1 = No revision',
+        '6 = Complete revision'
     );
     card.appendChild(sl.el);
 
@@ -1020,13 +1020,12 @@ function renderRevisionExtent() {
     labels.style.marginTop = '-12px';
     labels.innerHTML =
         '<strong>Scale guide:</strong><br>' +
-        '1 = Do not change at all<br>' +
-        '2 = Change very slightly<br>' +
-        '3 = Correct minor errors<br>' +
-        '4 = Make small revisions<br>' +
-        '5 = Make moderate revisions<br>' +
-        '6 = Make major revisions<br>' +
-        '7 = Change completely';
+        '1 = No revision<br>' +
+        '2 = Minor surface-level edits (e.g., grammar or wording)<br>' +
+        '3 = Small content revisions<br>' +
+        '4 = Moderate content revisions<br>' +
+        '5 = Extensive revisions to most of the answer<br>' +
+        '6 = Complete revision of the answer';
     card.appendChild(labels);
 
     var btn = document.createElement('button'); btn.className = 'btn btn-primary'; btn.textContent = 'Continue';
@@ -1053,6 +1052,7 @@ function renderAiFam() {
     card.appendChild(btn); mount(card);
 }
 
+
 function renderSelfEfficacy() {
     var card = createCard(PHASE_LABELS['SELF_EFFICACY']);
     var q = document.createElement('p'); q.className = 'question-text';
@@ -1070,7 +1070,6 @@ function renderSelfEfficacy() {
     });
     card.appendChild(btn); mount(card);
 }
-
 
 function renderDone() {
     var card = createCard('');
@@ -1186,7 +1185,6 @@ async function submitData() {
         if (statusEl) { statusEl.textContent = 'Error saving responses. Please inform the researcher.'; statusEl.style.color = '#ef4444'; }
     }
 }
-
 
 render();
 </script>
